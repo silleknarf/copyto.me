@@ -6,5 +6,5 @@ RUN apt update && \
     curl -sSL https://aka.ms/getvsdbgsh | /bin/sh /dev/stdin -v latest -l /vsdbg
 
 WORKDIR /source
-COPY CopyToMeService .
+COPY . .
 CMD dotnet run --urls https://0.0.0.0:5000
