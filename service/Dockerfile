@@ -7,4 +7,4 @@ RUN apt update && \
 
 WORKDIR /source
 COPY . .
-CMD dotnet run --urls https://0.0.0.0:5000
+CMD dotnet run --urls https://0.0.0.0:5000 --project CopyToMeService
