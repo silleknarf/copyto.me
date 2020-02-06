@@ -1,3 +1,5 @@
+![Master Build Status](https://img.shields.io/badge/dynamic/json?color=blue&label=Build%20Status&query=%24%5B0%5D.state&url=https%3A%2F%2Fapi.github.com%2Frepos%2Fsilleknarf%2Fcopyto.me%2Fstatuses%2Fmaster)
+
 README
 ======
 
