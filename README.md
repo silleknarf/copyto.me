@@ -4,3 +4,8 @@ README
 ======
 
 CopyTo.me is an application for sending things to yourself
+
+Getting Started
+===============
+
+Run `docker-compose up` and then navigate to [https://localhost:5000](https://localhost:5000).
