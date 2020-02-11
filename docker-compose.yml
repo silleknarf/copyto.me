@@ -4,6 +4,8 @@ services:
     build:
       context: ./
       dockerfile: ./service/Dockerfile
+      volumes:
+        "$(AppData)/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro"
     ports:
       - '5000:5000'
     image: 'copyto:latest'
