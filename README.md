@@ -12,5 +12,7 @@ Set the environment variables in your profile:
 
     export AUTHENTICATION__GOOGLE__CLIENTID=
     export AUTHENTICATION__GOOGLE__CLIENTSECRET=
+    export SENDGRIDKEY=
+    export SENDGRIDUSER=
 
 Run `docker-compose up` and then navigate to [https://localhost:5000](https://localhost:5000).

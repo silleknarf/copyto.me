@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using CopyToMeService.Data;
 using CopyToMeService.Models;
@@ -37,6 +38,10 @@ namespace CopyToMeService
                 .AddIdentityServerJwt();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddTransient<IEmailSender, EmailSender>();
+            services.Configure<AuthMessageSenderOptions>(Configuration);
+
             services.AddAuthentication()
                 .AddGoogle(options =>
                 {

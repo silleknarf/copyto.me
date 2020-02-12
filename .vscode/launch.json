@@ -9,7 +9,7 @@
         "request": "attach",
         "processId": "${command:pickRemoteProcess}",
         "sourceFileMap": {
-            "/source/service": "${workspaceRoot}/service/CopyToMeService"
+            "/source/service": "${workspaceRoot}/service"
         },
         "pipeTransport": {
             "pipeProgram": "docker",

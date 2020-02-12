@@ -9,6 +9,8 @@ services:
     environment:
       - AUTHENTICATION__GOOGLE__CLIENTID
       - AUTHENTICATION__GOOGLE__CLIENTSECRET
+      - SENDGRIDUSER
+      - SENDGRIDKEY
     image: 'copyto:latest'
   db:
     image: mysql:5
