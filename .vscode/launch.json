@@ -9,11 +9,11 @@
         "request": "attach",
         "processId": "${command:pickRemoteProcess}",
         "sourceFileMap": {
-            "/source": "${workspaceRoot}/service/CopyToMeService"
+            "/source/service": "${workspaceRoot}/service/CopyToMeService"
         },
         "pipeTransport": {
             "pipeProgram": "docker",
-            "pipeArgs": [ "exec", "-i", "running-copytome" ],
+            "pipeArgs": [ "exec", "-i", "copytome_copyto_1" ],
             "debuggerPath": "/vsdbg/vsdbg",
             "pipeCwd": "${workspaceRoot}",
             "quoteArgs": false
