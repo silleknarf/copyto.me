@@ -8,7 +8,7 @@ CopyTo.me is an application for sending things to yourself
 Getting Started
 ===============
 
-Set the environment variables in your profile:
+Set the environment variables in your `~/bash_profile`:
 
     export AUTHENTICATION__GOOGLE__CLIENTID=
     export AUTHENTICATION__GOOGLE__CLIENTSECRET=
