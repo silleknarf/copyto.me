@@ -11,7 +11,9 @@ services:
       - AUTHENTICATION__GOOGLE__CLIENTSECRET
       - SENDGRIDUSER
       - SENDGRIDKEY
-    image: 'copyto:latest'
+    volumes:
+      - ./service:/source/service
+      - ./ui:/source/ui
   db:
     image: mysql:5
     command: mysqld --default-authentication-plugin=mysql_native_password
