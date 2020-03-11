@@ -105,7 +105,7 @@ namespace CopyToMeService.Areas.Identity.Pages.Account
                         Email = info.Principal.FindFirstValue(ClaimTypes.Email)
                     };
                 }
-                return await OnPostConfirmationAsync();
+                return await OnPostConfirmationAsync(returnUrl);
             }
         }
 
@@ -131,7 +131,12 @@ namespace CopyToMeService.Areas.Identity.Pages.Account
                     {
                         _logger.LogInformation("User created an account using {Name} provider.", info.LoginProvider);
 
-                        return LocalRedirect(returnUrl);
+                        var loginResult = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false, bypassTwoFactor : true);
+                        if (loginResult.Succeeded)
+                        {
+                            _logger.LogInformation("{Name} logged in with {LoginProvider} provider.", info.Principal.Identity.Name, info.LoginProvider);
+                            return LocalRedirect(returnUrl);
+                        }
                     }
                 }
                 foreach (var error in result.Errors)
