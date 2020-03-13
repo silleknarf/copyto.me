@@ -11,5 +11,6 @@ RUN npm install npm@latest -g
 WORKDIR /source/service
 COPY service .
 COPY ui ../ui
+COPY npm ../npm
 
 CMD dotnet watch --project CopyToMeService run --urls https://+:5000 

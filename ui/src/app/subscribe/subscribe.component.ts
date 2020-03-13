@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IPayPalConfig } from '../../../../../ngx-paypal/src/lib/models/paypal-models';
+import { IPayPalConfig } from '../../../node_modules/ngx-paypal/dist/ngx-paypal';
 
 @Component({
   selector: 'app-subscribe',

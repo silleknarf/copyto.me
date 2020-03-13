@@ -14,6 +14,7 @@ services:
     volumes:
       - ./service:/source/service
       - ./ui:/source/ui
+      - ./npm:/source/npm
   db:
     image: mysql:5
     command: mysqld --default-authentication-plugin=mysql_native_password
