@@ -9,6 +9,7 @@ using CopyToMeService.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace CopyToMeService
 {
@@ -101,7 +102,9 @@ namespace CopyToMeService
 
                 if (env.IsDevelopment())
                 {
-                    spa.UseAngularCliServer(npmScript: "start");
+                    //spa.Options.StartupTimeout = new TimeSpan(days: 0, hours: 0, minutes: 3, seconds: 0);
+                    //spa.UseAngularCliServer(npmScript: "start");
+                    spa.UseProxyToSpaDevelopmentServer("http://ui:4200");
                 }
             });
         }

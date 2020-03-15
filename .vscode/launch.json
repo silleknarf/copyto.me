@@ -13,7 +13,7 @@
         },
         "pipeTransport": {
             "pipeProgram": "docker",
-            "pipeArgs": [ "exec", "-i", "copytome_copyto_1" ],
+            "pipeArgs": [ "exec", "-i", "copytome_service_1" ],
             "debuggerPath": "/vsdbg/vsdbg",
             "pipeCwd": "${workspaceRoot}",
             "quoteArgs": false

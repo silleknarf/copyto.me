@@ -13,4 +13,4 @@ COPY service .
 COPY ui ../ui
 COPY npm ../npm
 
-CMD dotnet watch --project CopyToMeService run --urls https://+:5000 
+CMD dotnet watch --project CopyToMeService run --urls https://+:5000 --verbosity normal
