@@ -19,8 +19,9 @@ export class SubscribeComponent implements OnInit {
   private initConfig(): void {
     this.payPalConfig = {
         currency: 'USD',
-        clientId: 'sb',
-        createSubscription: (data, actions ) => {
+        clientId: 'ATAWnpLKi3bPlQv1pZkJG1H3P6ko7wdlZZKOMRH4k99zNrBWv0kV5aFn9grjifPBJu78mKBvrmV0WnUa',
+        vault: 'true',
+        createSubscription: (data, actions) => {
           return actions.subscription.create({
             'plan_id': 'P-7GT61738G39013536LZXLEEQ'
           });
