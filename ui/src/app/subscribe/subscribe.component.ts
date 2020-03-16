@@ -22,7 +22,7 @@ export class SubscribeComponent implements OnInit {
         clientId: 'sb',
         createSubscription: (data, actions ) => {
           return actions.subscription.create({
-            'plan_id': 'P-2UF78835G6983425GLSM44MA'
+            'plan_id': 'P-7GT61738G39013536LZXLEEQ'
           });
         },
         onApprove: (data, actions) => {
