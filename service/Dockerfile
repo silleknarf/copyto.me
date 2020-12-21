@@ -5,8 +5,8 @@ RUN apt update && \
     apt install unzip && \
     curl -sSL https://aka.ms/getvsdbgsh | /bin/sh /dev/stdin -v latest -l /vsdbg
 
-RUN apt -y install npm
-RUN npm install npm@latest -g
+RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+RUN sudo apt install nodejs
 
 WORKDIR /source/service
 COPY service .
